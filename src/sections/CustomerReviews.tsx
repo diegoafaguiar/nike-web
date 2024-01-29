@@ -1,7 +1,5 @@
-import React from "react";
-
-function CustomerReviews() {
-  return <div>CustomerReviews</div>;
-}
+const CustomerReviews = () => {
+  return <section className="max-container">CustomerReviews</section>;
+};
 
 export default CustomerReviews;

@@ -29,6 +29,11 @@ export const navLinks = [
   { href: "#contact-us", label: "Contact Us" },
 ];
 
+export interface ShoeProps {
+  thumbnail: string;
+  bigShoe: string;
+}
+
 export const shoes = [
   {
     thumbnail: thumbnailShoe1,

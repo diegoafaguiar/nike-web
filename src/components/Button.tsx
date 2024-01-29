@@ -1,21 +1,38 @@
-import React from "react";
-
 interface ButtonProps {
   label: string;
-  iconUrl: string;
-  onClick?: () => void;
+  iconURL?: string;
+  backgroundColor?: string;
+  textColor?: string;
+  borderColor?: string;
+  fullWidth?: boolean;
 }
 
-const Button = ({ label, iconUrl, onClick }: ButtonProps) => {
+const Button = ({
+  label,
+  iconURL,
+  backgroundColor,
+  textColor,
+  borderColor,
+  fullWidth,
+}: ButtonProps) => {
   return (
     <button
-      id=""
-      className="flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none bg-coral-red rounded-full text-white hover:bg-coral-red-500 hover:text-white focus:outline-none active:shadow-none"
-      name={label}
+      className={`flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none
+      ${
+        backgroundColor
+          ? `${backgroundColor} ${textColor} ${borderColor}`
+          : "bg-coral-red text-white border-coral-red"
+      } rounded-full ${fullWidth && "w-full"}`}
     >
-      <img src={iconUrl} alt={label} className="ml-2 rounded-full w-5 h-5">
-        {label}
-      </img>
+      {label}
+
+      {iconURL && (
+        <img
+          src={iconURL}
+          alt="arrow right icon"
+          className="ml-2 rounded-full bg-white w-5 h-5"
+        />
+      )}
     </button>
   );
 };
