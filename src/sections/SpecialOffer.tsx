@@ -4,7 +4,7 @@ import Button from "../components/Button";
 
 const SpecialOffer = () => {
   return (
-    <section className="flex justify-wrap items-center max-xl:flex-col-reverse">
+    <section className="flex justify-wrap items-center max-xl:flex-col-reverse max-container">
       <div className="flex-1">
         <img
           src={offer}
