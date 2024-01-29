@@ -1,7 +1,5 @@
-import React from "react";
-
-function Subscribe() {
-  return <div>Subscribe</div>;
-}
+const Subscribe = () => {
+  return <section>Subscribe</section>;
+};
 
 export default Subscribe;
